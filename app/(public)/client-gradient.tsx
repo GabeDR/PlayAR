@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Gradient } from './Gradient.js'
+import { Gradient } from './gradient.js'
 
 export function ClientGradient() {
 
