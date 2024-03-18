@@ -1,11 +1,16 @@
+// @ts-nocheck
 "use client";
 import { Button } from "@/components/ui/button";
 import { Gradient } from './gradient.js'
 
+type GradientType = {
+    initGradient: (x: string) => void
+} 
+
 export function ClientGradient() {
 
       // Create your instance
-  const gradient = new Gradient()
+  const gradient = new Gradient() 
 
   // Call `initGradient` with the selector to your canvas
   gradient.initGradient('#gradient-canvas')
