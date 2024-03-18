@@ -1,5 +1,6 @@
 // @ts-nocheck
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { Gradient } from './gradient.js'
 

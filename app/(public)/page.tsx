@@ -1,8 +1,9 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import pic1 from "../../public/picture.webp"
 import ClientImage from "./client-image";
-import { ClientGradient } from "./client-gradient";
+import dynamic from 'next/dynamic'
+
+const ClientGradient = dynamic(() => import("./client-gradient").then((mod) => mod.ClientGradient), {
+  ssr: false,
+})
 
 export default function Home() {
   return (
