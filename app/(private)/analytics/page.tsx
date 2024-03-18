@@ -19,7 +19,7 @@ import {
 import { redirect } from "next/navigation";
 import Link from "next/link";
   
-export default function page({searchParams: {player}}: {searchParams: {player?:  string}}) {
+export default function page({searchParams: {player}}: {searchParams: {player?:  "Jake" | "Gabe" | "Tali"}}) {
 
     const playerWithDefault = player ?? "Jake";
 
