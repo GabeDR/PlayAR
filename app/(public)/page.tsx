@@ -1,9 +1,6 @@
 import ClientImage from "./client-image";
 import dynamic from 'next/dynamic'
-
-const ClientGradient = dynamic(() => import("./client-gradient").then((mod) => mod.ClientGradient), {
-  ssr: false,
-})
+import { ClientGradient } from "./client-gradient";
 
 export default function Home() {
   return (

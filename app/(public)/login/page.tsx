@@ -7,7 +7,6 @@ export default function Page() {
         "use server";
         const rawFormData = Object.fromEntries(formData)
 
-        console.log('data', rawFormData);
         redirect('/dashboard')
     }
 

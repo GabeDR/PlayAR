@@ -8,7 +8,6 @@ import { useHover } from "usehooks-ts"
 export default function Play({x}: {x: number}) {
     const hoverRef = useRef(null)
     const isHover = useHover(hoverRef)
-    console.log('hover', x)
     return (
         <div ref={hoverRef} className="flex items-center justify-between rounded-lg bg-gray-100 h-16 px-4 cursor-pointer">
         <div>{`Play ${x}`}</div>
