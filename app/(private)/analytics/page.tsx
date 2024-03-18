@@ -23,6 +23,8 @@ export default function page({searchParams: {player}}: {searchParams: {player?: 
 
     const playerWithDefault = player ?? "Jake";
 
+    const t =5;
+
     const data = {
         Jake: [
             {
