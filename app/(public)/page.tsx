@@ -14,8 +14,8 @@ export default function Home() {
                 <div className="text-sm">PlayAR offers a cutting-edge training solution with its immersive AR and VR technology, tailored for football practice. It uniquely combines eye-tracking and head movement features to enhance decision-making and confidence in a safe, controlled environment. Our expertise and strategic partnerships ensure a superior, injury-preventive training experience, making PlayAR the top choice for advanced sports preparation.</div>
                 <div className="text-xl pb-2">What</div>
                 <div className="text-sm">PlayAR offers a cutting-edge training solution with its immersive AR and VR technology, tailored for football practice. It uniquely combines eye-tracking and head movement features to enhance decision-making and confidence in a safe, controlled environment. Our expertise and strategic partnerships ensure a superior, injury-preventive training experience, making PlayAR the top choice for advanced sports preparation.</div>            
-            </div> : <ClientImage />
-            </div>
+                </div> : <ClientImage />
+      </div>
     </>
   );
 }
