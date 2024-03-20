@@ -1,5 +1,5 @@
 import Image from "next/image";
-import pic1 from "../../public/picture.webp"
+import pic1 from "../../public/quest.jpg"
 
 export default function ClientImage() {
     return (  
