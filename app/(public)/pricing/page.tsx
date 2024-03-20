@@ -1,29 +1,31 @@
-import { Button } from "@/components/ui/button";
+import React from 'react';
 
-export default function PricingPage() {
-    const pricingOptions = [
-        { id: 1, title: 'Whats Included?', price: '$400/month', features: ['Dashboard Features', 'Web, iPad, and iPhone Apps', 'Live View','Accurate feedback using eye and head tracking', 'Custom Plays'] },
-    ];
-
+const PricingPage: React.FC = () => {
     return (
-        <>
-            <div className="text-4xl font-semibold py-4">Pricing</div>
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-4 py-4">
-                {pricingOptions.map(option => (
-                    <div key={option.id} className="rounded-lg bg-gray-100 w-full p-4">
-                        <div className="text-xl pb-2">{option.title}</div>
-                        <div className="text-lg">{option.price}</div>
-                        <ul className="text-sm">
-                            {option.features.map((feature, index) => (
-                                <li key={index}>{feature}</li>
-                            ))}
-                        </ul>
-                        <a href="/checkout">
-                            <Button>Sign Up Now!</Button>
-                        </a>
-                    </div>
-                ))}
-            </div>
-        </>
-    );
-}
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+            <div className="p-6 bg-white rounded shadow-md">
+                <h1 className="text-2xl font-bold mb-4">Pricing</h1>
+                <h2 className="text-xl mb-2">$400/month</h2>
+                <p className="mb-4">Our pricing includes. Here's what you get:</p>
+                <ul className="list-disc list-inside">
+                    <li>Immersive VR/AR Training</li>
+                    <li>Tailored Athletic Practices</li>
+                    <li>Interactive User Interface</li>
+                    <li>AI-Enhanced Feedback</li>
+                    <li>Safety-Focused Design</li>
+                    <li>Post-Practice Analysis</li>
+                    <li>Advanced Software Integration</li>
+                    <li>Customizable Training Sessions</li>
+                    </ul>
+                                        <a href="/signup">
+                                            {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+                                            <button className="px-4 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-600">
+                                                Sign up
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            );
+};
+
+export default PricingPage;

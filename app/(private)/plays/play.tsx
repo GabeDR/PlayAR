@@ -10,7 +10,7 @@ export default function Play({x}: {x: number}) {
     const isHover = useHover(hoverRef)
     return (
         <div ref={hoverRef} className="flex items-center justify-between rounded-lg bg-gray-100 h-16 px-4 cursor-pointer">
-        <div>{`Play ${x}`}</div>
+        <div>{`${x}`}</div>
         <div className="flex items-center gap-2">                    
         {isHover && <>
             <Button variant="ghost" size="icon" className="hover:bg-gray-200">

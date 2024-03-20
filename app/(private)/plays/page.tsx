@@ -3,10 +3,10 @@ import Play from "./play";
 export default function Page() {
     return (
         <>
-            <div className="text-4xl font-semibold py-4">Your Plays</div>
+            <div className="text-4xl font-semibold py-4">Your Football Plays</div>
 
             <div className="flex flex-col gap-2">
-                {[1,2,3,4,5,6,7,8,9,10].map(x => <Play x={x} />)}  
+                {["Smash", "Flood", "Mesh", "Hoss", "Crossers", "Scissors", "Run-pass Option", "Inside Run", "Outside Run"].map(play => <Play x={play} />)}  
             </div>
         </>
     )
