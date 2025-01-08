@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { EyeOpenIcon, Pencil1Icon, TrashIcon } from "@radix-ui/react-icons"
+import { ArrowUpIcon, EyeOpenIcon, Pencil1Icon, TrashIcon } from "@radix-ui/react-icons"
 import { useRef } from "react"
 import { useHover } from "usehooks-ts"
 
@@ -17,7 +17,7 @@ export default function Play({x}: {x: number}) {
             <Pencil1Icon />
         </Button>
         <Button variant="ghost" size="icon" className="hover:bg-gray-200">
-            <TrashIcon />
+            <ArrowUpIcon/>
         </Button >
         <Button variant="ghost" size="icon" className="hover:bg-gray-200">
             <EyeOpenIcon />

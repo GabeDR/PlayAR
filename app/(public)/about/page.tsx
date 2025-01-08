@@ -1,44 +1,122 @@
-import type React from 'react';
+'use client'
 
-const AboutPage: React.FC = () => {
+import Image from 'next/image';
+import { Mail, Phone, MapPin, Globe } from 'lucide-react';
+
+export default function AboutPage() {
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-white">
-            <h1 className="text-4xl font-bold mb-4">Who We Are</h1>
-            <p className="text-lg mb-8 justify-center">
-                PlayAR is an innovative sports training enterprise that specializes in integrating augmented and virtual reality (AR/VR) 
-                technologies to transform the athletic training landscape. We offer a sophisticated platform that allows athletes, particularly 
-                football players, to engage in highly realistic, immersive practice sessions. By simulating real-game scenarios, PlayAR enables 
-                players to enhance their strategic decision-making, reaction times, and performance under game-like conditions. Our solution is 
-                designed to overcome the limitations of traditional training methods, providing a safe, efficient, and effective way for athletes to 
-                practice and improve their skills. With a focus on user-friendly interfaces and data-driven performance analysis, PlayAR is setting 
-                new standards in sports training, helping athletes achieve their full potential on and off the field.
-            </p>
+        <main className="min-h-screen">
+            {/* Hero Section */}
+            <section className="relative py-24 px-8 md:px-16 bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
+                <div className="max-w-4xl mx-auto">
+                    <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                        Who We Are
+                    </h1>
+                    <p className="text-xl leading-relaxed text-gray-600 dark:text-gray-300">
+                        PlayAR is an innovative sports training enterprise that specializes in integrating augmented and virtual reality (AR/VR)
+                        technologies to transform the athletic training landscape. We offer a sophisticated platform that allows athletes, particularly
+                        football players, to engage in highly realistic, immersive practice sessions.
+                    </p>
+                </div>
+            </section>
 
-            <h2 className="text-2xl font-bold mb-4">Our Purpose</h2>
-            <p className="text-lg mb-8">
-                The purpose of PlayAR is to transform athletic training with advanced technology, providing athletes with a virtual environment that mimics real-game scenarios. Through augmented and virtual reality, PlayAR aims to enhance players' skills, decision-making, and performance by offering a realistic, interactive training platform. This enables athletes to practice and refine their abilities in a controlled and safe setting, preparing them more effectively for competitive play and reducing the risk of injury. PlayAR's ultimate goal is to revolutionize how athletes train, making it more engaging, efficient, and effective, thereby elevating their potential for success in actual sports competitions.
-            </p>
+            {/* Purpose Section */}
+            <section className="py-24 px-8 md:px-16">
+                <div className="max-w-4xl mx-auto">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 className="text-3xl font-bold mb-6">Our Purpose</h2>
+                            <div className="space-y-4 text-gray-600 dark:text-gray-300">
+                                <p>
+                                    PlayAR transforms athletic training with advanced technology, providing athletes with a virtual environment that mimics real-game scenarios.
+                                </p>
+                                <p>
+                                    Through augmented and virtual reality, we enhance players' skills, decision-making, and performance by offering a realistic, interactive training platform.
+                                </p>
+                                <p>
+                                    Our ultimate goal is to revolutionize how athletes train, making it more engaging, efficient, and effective, thereby elevating their potential for success.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="aspect-square relative rounded-2xl overflow-hidden">
+                                <Image
+                                    src="/pic1.jpg"
+                                    alt="Training in action"
+                                    fill
+                                    className="object-cover hover:scale-105 transition-transform duration-300"
+                                />
+                            </div>
+                            <div className="aspect-square relative rounded-2xl overflow-hidden">
+                                <Image
+                                    src="/pic2.jpg"
+                                    alt="VR Training session"
+                                    fill
+                                    className="object-cover hover:scale-105 transition-transform duration-300"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <p className="text-lg mb-8">
-                For more information about PlayAR, inquiries about our products, or to schedule a demo, please reach out to us through the following channels:
-            </p>
-
-            <div className="flex justify-center space-x-4">
-                <div className="w-32 h-32 bg-gray-300" />
-                <img src="pic1.jpg" alt="pic1" className="w-32 h-32" />
-                <img src="pic2.jpg" alt="pic2" className="w-32 h-32" />
-            </div>
-
-            <p className="text-lg mb-8">
-                Email: gabriel.duarte@pinecrest.com
-                Phone: +1 (800) 123-4567
-                Website: www.playar.com/contact
-                Office Address: 123 PlayAR Way, Tech City, TC 12345, USA
-                We look forward to hearing from you and discussing how PlayAR can enhance your athletic training experience. Our team is committed to providing support and answering any questions you may have.
-            </p>
-        </div>
+            {/* Contact Section */}
+            <section className="py-24 px-8 md:px-16 bg-gray-50 dark:bg-gray-900/50">
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="text-3xl font-bold mb-12 text-center">Get in Touch</h2>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <div className="space-y-8">
+                            <div className="flex items-start gap-4">
+                                <Mail className="w-6 h-6 text-blue-600 mt-1" />
+                                <div>
+                                    <h3 className="font-semibold mb-1">Email</h3>
+                                    <a href="mailto:gabriel.duarte@pinecrest.com" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                                        gabriel.duarte@pinecrest.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-4">
+                                <Phone className="w-6 h-6 text-blue-600 mt-1" />
+                                <div>
+                                    <h3 className="font-semibold mb-1">Phone</h3>
+                                    <a href="tel:+18001234567" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                                        +1 (800) 123-4567
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-4">
+                                <MapPin className="w-6 h-6 text-blue-600 mt-1" />
+                                <div>
+                                    <h3 className="font-semibold mb-1">Address</h3>
+                                    <p className="text-gray-600 dark:text-gray-300">
+                                        123 PlayAR Way<br />
+                                        Tech City, TC 12345<br />
+                                        USA
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-4">
+                                <Globe className="w-6 h-6 text-blue-600 mt-1" />
+                                <div>
+                                    <h3 className="font-semibold mb-1">Website</h3>
+                                    <a href="https://www.playar.com/contact" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                                        www.playar.com/contact
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+                            <h3 className="text-xl font-semibold mb-6">Schedule a Demo</h3>
+                            <p className="text-gray-600 dark:text-gray-300 mb-6">
+                                Interested in seeing PlayAR in action? Schedule a demo with our team and experience the future of athletic training firsthand.
+                            </p>
+                            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Request Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     );
-};
-
-export default AboutPage;
+}
