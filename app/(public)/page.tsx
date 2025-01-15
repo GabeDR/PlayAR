@@ -81,10 +81,10 @@ The system helps identify patterns in your performance and suggests focused trai
           </div>
           <div className="w-full md:w-1/2">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              The Future of Quarterback Training
+              The Future of Sports Training
             </h1>
             <p className="mt-4 text-xl text-gray-600">
-              Revolutionizing football practice with immersive AR/VR technology
+              Revolutionizing sports practice with immersive AR/VR technology
             </p>
           </div>
         </div>
