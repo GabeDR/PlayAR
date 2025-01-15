@@ -1,8 +1,8 @@
 'use client'
 
-import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
 import { BentoGrid, BentoCard } from '../components/bento-grid';
+import Image from 'next/image';
 
 export default function Home() {
   const features = [
@@ -18,16 +18,7 @@ export default function Home() {
 • Release timing optimization
 
 Each session provides detailed insights and personalized recommendations for improvement, helping you develop faster and more effectively than traditional training methods.`,
-      image: "training.jpg",
-      className: "md:col-span-2 md:row-span-2",
-      modalImage: (
-        <Image
-          src="/training.jpg"
-          alt="Training Innovation"
-          fill
-          className="object-cover"
-        />
-      )
+      className: "md:col-span-2 md:row-span-2"
     },
     {
       title: "Real-Time Analysis",
@@ -41,16 +32,7 @@ Each session provides detailed insights and personalized recommendations for imp
 • Progress tracking
 
 This immediate feedback loop accelerates learning and helps develop muscle memory more effectively than traditional delayed feedback methods.`,
-      image: "analysis.jpg",
-      className: "md:col-span-1 md:row-span-1",
-      modalImage: (
-        <Image
-          src="/analysis.jpg"
-          alt="Real-Time Analysis"
-          fill
-          className="object-cover"
-        />
-      )
+      className: "md:col-span-1 md:row-span-1"
     },
     {
       title: "Virtual Defense",
@@ -64,16 +46,7 @@ This immediate feedback loop accelerates learning and helps develop muscle memor
 • Blitz identification practice
 
 The AI continuously adjusts to provide the perfect level of challenge, ensuring you're always pushing your limits while maintaining confidence.`,
-      image: "defense.jpg",
-      className: "md:col-span-1 md:row-span-2",
-      modalImage: (
-        <Image
-          src="/defense.jpg"
-          alt="Virtual Defense"
-          fill
-          className="object-cover"
-        />
-      )
+      className: "md:col-span-1 md:row-span-1"
     },
     {
       title: "Performance Tracking",
@@ -87,23 +60,14 @@ The AI continuously adjusts to provide the perfect level of challenge, ensuring 
 • Custom goal tracking
 
 The system helps identify patterns in your performance and suggests focused training areas for maximum improvement.`,
-      image: "metrics.jpg",
-      className: "md:col-span-2 md:row-span-1",
-      modalImage: (
-        <Image
-          src="/metrics.jpg"
-          alt="Performance Metrics"
-          fill
-          className="object-cover"
-        />
-      )
+      className: "md:col-span-2 md:row-span-1"
     }
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="h-screen flex items-center relative px-8 md:px-16">
+      <section className="h-screen flex items-center relative px-8 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="w-full md:w-1/2">
             <Image
@@ -132,7 +96,7 @@ The system helps identify patterns in your performance and suggests focused trai
       </section>
 
       {/* Features Grid */}
-      <section className="min-h-screen py-16 px-8 md:px-16">
+      <section className="min-h-screen py-16 px-8 md:px-16 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Experience the Difference</h2>
           <BentoGrid className="grid-cols-1 md:grid-cols-4 auto-rows-[300px] gap-4">
@@ -142,13 +106,7 @@ The system helps identify patterns in your performance and suggests focused trai
                 name={feature.title}
                 description={feature.description}
                 fullDescription={feature.fullDescription}
-                modalImage={feature.modalImage}
-                className={`
-                  ${feature.title === "Training Innovation" ? "md:col-span-2 md:row-span-2" : ""}
-                  ${feature.title === "Virtual Defense" ? "md:col-span-1 md:row-span-1" : ""}
-                  ${feature.title === "Real-Time Analysis" ? "md:col-span-1 md:row-span-1" : ""}
-                  ${feature.title === "Performance Tracking" ? "md:col-span-2 md:row-span-1" : ""}
-                `}
+                className={feature.className}
               />
             ))}
           </BentoGrid>

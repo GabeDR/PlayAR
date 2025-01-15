@@ -3,9 +3,9 @@ import { Check } from 'lucide-react';
 
 const PricingPage: React.FC = () => {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+        <div className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <section className="py-24 px-8">
+            <section className="py-24 px-8 bg-white">
                 <div className="max-w-6xl mx-auto text-center">
                     <h1 className="text-5xl font-bold mb-6">Revolutionary Training at Your Fingertips</h1>
                     <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -17,10 +17,10 @@ const PricingPage: React.FC = () => {
                             <h2 className="text-4xl font-bold">$800</h2>
                             <span className="text-gray-600">/month</span>
                         </div>
-                        <a href="/signup">
+                        <a href="/dashboard">
                             <button
                                 type="button"
-                                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors mb-6"
+                                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-2xl transition-colors mb-6"
                             >
                                 Get Started Now
                             </button>
@@ -31,7 +31,7 @@ const PricingPage: React.FC = () => {
             </section>
 
             {/* Features Grid */}
-            <section className="py-24 px-8 bg-white">
+            <section className="py-24 px-8 bg-gray-50">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl font-bold mb-12 text-center">Everything You Need to Excel</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -74,7 +74,7 @@ const PricingPage: React.FC = () => {
             </section>
 
             {/* What's Included Section */}
-            <section className="py-24 px-8">
+            <section className="py-24 px-8 bg-white">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl font-bold mb-12 text-center">Your Subscription Includes</h2>
                     <div className="space-y-6">

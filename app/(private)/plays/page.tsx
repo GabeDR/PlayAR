@@ -4,129 +4,86 @@ import Link from 'next/link';
 const plays = [
     {
         name: "Smash",
-        description: "Quick-hitting vertical route combination",
+        description: "A combination of corners and hitches",
         lastRun: "2024-01-15",
         successRate: "85%",
         players: 5
     },
     {
-        name: "Flood",
-        description: "Three-level passing concept to one side",
+        name: "Hoss",
+        description: "Hitches outside, Slots Seams",
         lastRun: "2024-01-14",
         successRate: "92%",
         players: 4
     },
     {
-        name: "Mesh",
-        description: "Crossing routes underneath coverage",
+        name: "Run-Pass Option",
+        description: "The option to hand the ball off or throw",
         lastRun: "2024-01-13",
         successRate: "78%",
-        players: 4
+        players: 6
     },
     {
-        name: "Hoss",
-        description: "Hitches outside, seams inside",
+        name: "Inside Zone",
+        description: "Quick hitting inside run",
         lastRun: "2024-01-12",
         successRate: "88%",
-        players: 4
+        players: 7
     },
     {
-        name: "Crossers",
-        description: "Multiple crossing routes at different depths",
+        name: "Outside Zone",
+        description: "Speed-based run attacking the edge",
         lastRun: "2024-01-11",
         successRate: "82%",
+        players: 7
+    },
+    {
+        name: "Four Verticals",
+        description: "Receivers run deep verticals to stretch the defense",
+        lastRun: "2024-01-10",
+        successRate: "90%",
         players: 5
     },
     {
-        name: "Scissors",
-        description: "Post and corner route combination",
-        lastRun: "2024-01-10",
-        successRate: "90%",
-        players: 3
-    },
-    {
-        name: "Run-pass Option",
-        description: "Combined running and passing play",
+        name: "Screen Pass",
+        description: "Quick pass with blockers out in front",
         lastRun: "2024-01-09",
         successRate: "87%",
         players: 6
     },
     {
-        name: "Inside Run",
-        description: "Power running play between the tackles",
+        name: "Triple Option",
+        description: "QB Option to either hand off, run, or pitch",
         lastRun: "2024-01-08",
         successRate: "75%",
-        players: 7
+        players: 6
     },
     {
-        name: "Outside Run",
-        description: "Speed-based run to the edge",
+        name: "Post Wheel",
+        description: "WR Runs post and RB runs wheel behind them",
         lastRun: "2024-01-07",
         successRate: "80%",
-        players: 7
+        players: 5
     },
-    // Additional plays
     {
-        name: "Four Verticals",
-        description: "All receivers run deep routes to stretch defense",
+        name: "Bubble Screen",
+        description: "Quick screen pass to bubbling receiver",
         lastRun: "2024-01-06",
         successRate: "83%",
         players: 5
     },
     {
-        name: "Screen Pass",
-        description: "Quick pass behind the line with blockers",
+        name: "Flea Flicker",
+        description: "Trick player where RB pitches the ball back to QB to throw a deep pass",
         lastRun: "2024-01-05",
         successRate: "89%",
-        players: 6
-    },
-    {
-        name: "Double Slant",
-        description: "Two receivers running slant routes",
-        lastRun: "2024-01-04",
-        successRate: "86%",
-        players: 4
-    },
-    {
-        name: "Triple Option",
-        description: "Three potential ball carriers in option play",
-        lastRun: "2024-01-03",
-        successRate: "77%",
-        players: 6
-    },
-    {
-        name: "Wheel Route",
-        description: "Running back runs vertical route from backfield",
-        lastRun: "2024-01-02",
-        successRate: "81%",
-        players: 5
-    },
-    {
-        name: "Bubble Screen",
-        description: "Quick pass to receiver with blockers",
-        lastRun: "2024-01-01",
-        successRate: "88%",
-        players: 5
-    },
-    {
-        name: "QB Draw",
-        description: "Quarterback run disguised as pass play",
-        lastRun: "2023-12-31",
-        successRate: "79%",
-        players: 6
-    },
-    {
-        name: "Flea Flicker",
-        description: "Trick play with handoff and deep pass",
-        lastRun: "2023-12-30",
-        successRate: "72%",
         players: 7
     },
     {
-        name: "Zone Read",
-        description: "QB reads defensive end for run decision",
-        lastRun: "2023-12-29",
-        successRate: "84%",
+        name: "Read Option",
+        description: "QB reads defensive end to decide if they run or hand off",
+        lastRun: "2024-01-04",
+        successRate: "86%",
         players: 6
     }
 ];

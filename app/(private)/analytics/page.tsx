@@ -40,6 +40,13 @@ const players = {
     { name: "Completion Rate", value: 92, unit: "%" },
     { name: "Reaction Time", value: 0.25, unit: "s" }
   ],
+  Mehak: [
+    { name: "Time Delay", value: 7, unit: "ms" },
+    { name: "Steps", value: 30, unit: "steps" },
+    { name: "Players Tracked", value: 12, unit: "players" },
+    { name: "Completion Rate", value: 52, unit: "%" },
+    { name: "Reaction Time", value: 0.65, unit: "s" }
+  ],
 };
 
 type MetricType = {
@@ -55,7 +62,7 @@ const tooltipFormatter = (value: ValueType, name: NameType, props: TooltipProps<
   return [`${value}${(payload as MetricType).unit}`, (payload as MetricType).name];
 };
 
-export default function Analytics({ searchParams: { player } }: { searchParams: { player?: "Jake" | "Gabe" | "Tali" } }) {
+export default function Analytics({ searchParams: { player } }: { searchParams: { player?: "Jake" | "Gabe" | "Tali" | "Mehak"} }) {
   const selectedPlayer = player ?? "Jake";
 
   // Memoize player data to prevent unnecessary recalculations
@@ -85,6 +92,7 @@ export default function Analytics({ searchParams: { player } }: { searchParams: 
               <option value="Jake">Jake</option>
               <option value="Gabe">Gabe</option>
               <option value="Tali">Tali</option>
+              <option value="Mehak">Mehak</option>
             </select>
             <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500" />
           </div>
