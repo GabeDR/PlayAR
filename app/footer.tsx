@@ -37,8 +37,8 @@ export default function Footer() {
                             <Link href="/pricing" className="block text-gray-600 hover:text-blue-600 transition-colors">
                                 Pricing
                             </Link>
-                            <Link href="/signup" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                                Sign Up
+                            <Link href="/dashboard" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                                Demo
                             </Link>
                         </nav>
                     </div>
