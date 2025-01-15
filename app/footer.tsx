@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter,} from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -70,17 +70,13 @@ export default function Footer() {
                     <div>
                         <h3 className="font-semibold text-lg mb-4">Connect With Us</h3>
                         <div className="flex gap-4">
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                            <a href="https://www.linkedin.com/company/play-ar" target="_blank" rel="noopener noreferrer"
                                 className="p-2 rounded-full bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-600 transition-colors">
                                 <Linkedin className="w-5 h-5" />
                             </a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                            <a href="https://x.com/Play_AR_" target="_blank" rel="noopener noreferrer"
                                 className="p-2 rounded-full bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-600 transition-colors">
                                 <Twitter className="w-5 h-5" />
-                            </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                                className="p-2 rounded-full bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-600 transition-colors">
-                                <Instagram className="w-5 h-5" />
                             </a>
                         </div>
                         <p className="mt-4 text-sm text-gray-600">
