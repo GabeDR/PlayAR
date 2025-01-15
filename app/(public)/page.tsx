@@ -7,104 +7,92 @@ import { BentoGrid, BentoCard } from '../components/bento-grid';
 export default function Home() {
   const features = [
     {
-      title: "How",
-      description: "PlayAR enhances football training by providing an immersive, interactive training environment through augmented and virtual reality technologies.",
-      fullDescription: `PlayAR enhances football training by providing an immersive, interactive training environment through augmented and virtual reality technologies. It allows players, especially quarterbacks, to simulate game scenarios, practice plays, and make strategic decisions in real-time without the physical limitations of traditional training.
+      title: "Training Innovation",
+      description: "Experience next-generation quarterback training with advanced motion tracking and real-time feedback.",
+      fullDescription: `Our innovative training platform combines cutting-edge motion tracking with real-time feedback systems to revolutionize quarterback development. Using advanced sensors and AI analysis, we track every aspect of your performance:
 
-By integrating advanced software, PlayAR offers realistic simulations and immediate feedback on performance, enabling players to analyze and improve their skills. This approach not only reduces the risk of injury from physical practice but also increases the efficiency and effectiveness of training sessions, ultimately leading to better preparedness and performance in actual games.
+• Motion accuracy tracking
+• Decision-making speed analysis
+• Progression reading metrics
+• Footwork precision monitoring
+• Release timing optimization
 
-Key Features:
-• Real-time game scenario simulation
-• Immediate performance feedback
-• Risk-free practice environment
-• Advanced skill analysis tools
-• Customizable training programs`,
-      image: "quest.jpg",
-      className: "lg:col-span-1 lg:row-span-1",
+Each session provides detailed insights and personalized recommendations for improvement, helping you develop faster and more effectively than traditional training methods.`,
+      image: "training.jpg",
+      className: "md:col-span-2 md:row-span-2",
       modalImage: (
         <Image
-          src="/quest.jpg"
-          alt="VR Training"
+          src="/training.jpg"
+          alt="Training Innovation"
           fill
           className="object-cover"
         />
       )
     },
     {
-      title: "Why",
-      description: "PlayAR offers a cutting-edge training solution with its immersive AR and VR technology, tailored for football practice.",
-      fullDescription: `PlayAR offers a cutting-edge training solution with its immersive AR and VR technology, tailored for football practice. It uniquely combines eye-tracking and head movement features to enhance decision-making and confidence in a safe, controlled environment.
+      title: "Real-Time Analysis",
+      description: "Get instant feedback on your performance with our AI-powered analysis system.",
+      fullDescription: `Our real-time analysis system processes your movements and decisions instantly, providing immediate feedback that helps you adjust and improve on the fly. Key features include:
 
-Our expertise and strategic partnerships ensure a superior, injury-preventive training experience, making PlayAR the top choice for advanced sports preparation.
+• Instant performance metrics
+• Live form correction
+• Decision analysis
+• Comparative benchmarking
+• Progress tracking
 
-Benefits:
-• Enhanced decision-making skills
-• Improved reaction time
-• Better spatial awareness
-• Increased confidence
-• Reduced injury risk
-• Measurable performance improvements`,
-      image: "why2.png",
-      className: "lg:col-span-1 lg:row-span-1",
+This immediate feedback loop accelerates learning and helps develop muscle memory more effectively than traditional delayed feedback methods.`,
+      image: "analysis.jpg",
+      className: "md:col-span-1 md:row-span-1",
       modalImage: (
         <Image
-          src="/why2.png"
-          alt="AR Benefits"
+          src="/analysis.jpg"
+          alt="Real-Time Analysis"
           fill
           className="object-cover"
         />
       )
     },
     {
-      title: "The Problem",
-      description: "Traditional training methods often fail to replicate the intensity and complexity of actual game situations.",
-      fullDescription: `The primary problem that PlayAR addresses is the lack of realistic, game-specific practice opportunities for football players, particularly quarterbacks. Traditional training methods often fail to replicate the intensity and complexity of actual game situations, which can hinder a player's ability to make quick decisions and execute plays effectively during games.
+      title: "Virtual Defense",
+      description: "Face dynamic, AI-driven defensive scenarios that adapt to your skill level.",
+      fullDescription: `Our virtual defense system creates realistic, challenging scenarios that adapt to your performance level. The system includes:
 
-This gap in training quality can lead to:
-• Limited decision-making practice
-• Increased risk of injury during physical practice
-• Inconsistent skill development
-• Difficulty in simulating game pressure
-• Limited opportunities for repetition
-• Inability to practice complex scenarios safely
+• Dynamic defensive formations
+• Adaptive difficulty scaling
+• Situation-based scenarios
+• Coverage recognition training
+• Blitz identification practice
 
-PlayAR solves these challenges by providing an immersive training environment using augmented and virtual reality, allowing players to practice and refine their skills in a controlled, realistic setting that mimics the pressures and demands of actual games.`,
-      image: "problem.png",
-      className: "lg:col-span-1 lg:row-span-1",
+The AI continuously adjusts to provide the perfect level of challenge, ensuring you're always pushing your limits while maintaining confidence.`,
+      image: "defense.jpg",
+      className: "md:col-span-1 md:row-span-2",
       modalImage: (
         <Image
-          src="/problem.png"
-          alt="Training Problems"
+          src="/defense.jpg"
+          alt="Virtual Defense"
           fill
           className="object-cover"
         />
       )
     },
     {
-      title: "Partnerships",
-      description: "PlayAR has established partnerships with experts across sports and technology sectors.",
-      fullDescription: `PlayAR has established partnerships with leading experts across sports and technology sectors to create a comprehensive and effective training solution:
+      title: "Performance Tracking",
+      description: "Track your progress with detailed analytics and performance metrics.",
+      fullDescription: `Our comprehensive performance tracking system helps you monitor your development over time with detailed metrics and analytics:
 
-Key Partners:
-• Jeff Johnson - Florida High School Athletic Association
-• Dr. Dutch Franz - Virtual Reality Research Lead
-• David Pavek - Technology Executive
-• Stephen Taylor - VR Specialist, Dell Technologies
-• Dr. Manish Gupta - Sports Orthopedic Surgeon
-• Edward Perry - Former NFL Player and Coach
+• Historical performance data
+• Skill progression charts
+• Weakness identification
+• Strength assessment
+• Custom goal tracking
 
-These collaborations enrich PlayAR's offering by:
-• Incorporating real athletic experience
-• Implementing cutting-edge technology
-• Ensuring proper sports medicine protocols
-• Aligning with educational standards
-• Maintaining professional training methodologies`,
-      image: "partner.png",
-      className: "lg:col-span-1 lg:row-span-1",
+The system helps identify patterns in your performance and suggests focused training areas for maximum improvement.`,
+      image: "metrics.jpg",
+      className: "md:col-span-2 md:row-span-1",
       modalImage: (
         <Image
-          src="/partner.png"
-          alt="Our Partners"
+          src="/metrics.jpg"
+          alt="Performance Metrics"
           fill
           className="object-cover"
         />
@@ -129,32 +117,42 @@ These collaborations enrich PlayAR's offering by:
           </div>
           <div className="w-full md:w-1/2">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Where virtual practice meets real victory
-
+              The Future of Quarterback Training
             </h1>
+            <p className="mt-4 text-xl text-gray-600">
+              Revolutionizing football practice with immersive AR/VR technology
+            </p>
           </div>
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <p className="text-sm opacity-70">Find out more</p>
+          <p className="text-sm opacity-70">Discover More</p>
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </div>
       </section>
 
-      {/* Bento Grid Section */}
+      {/* Features Grid */}
       <section className="min-h-screen py-16 px-8 md:px-16">
-        <BentoGrid className="max-w-7xl mx-auto grid-cols-1 lg:grid-cols-2 lg:grid-rows-2">
-          {features.map((feature) => (
-            <BentoCard
-              key={feature.title}
-              name={feature.title}
-              description={feature.description}
-              fullDescription={feature.fullDescription}
-              modalImage={feature.modalImage}
-              className={feature.className}
-            />
-          ))}
-        </BentoGrid>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold mb-12 text-center">Experience the Difference</h2>
+          <BentoGrid className="grid-cols-1 md:grid-cols-4 auto-rows-[300px] gap-4">
+            {features.map((feature) => (
+              <BentoCard
+                key={feature.title}
+                name={feature.title}
+                description={feature.description}
+                fullDescription={feature.fullDescription}
+                modalImage={feature.modalImage}
+                className={`
+                  ${feature.title === "Training Innovation" ? "md:col-span-2 md:row-span-2" : ""}
+                  ${feature.title === "Virtual Defense" ? "md:col-span-1 md:row-span-1" : ""}
+                  ${feature.title === "Real-Time Analysis" ? "md:col-span-1 md:row-span-1" : ""}
+                  ${feature.title === "Performance Tracking" ? "md:col-span-2 md:row-span-1" : ""}
+                `}
+              />
+            ))}
+          </BentoGrid>
+        </div>
       </section>
     </main>
   );
