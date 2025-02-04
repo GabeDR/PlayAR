@@ -80,7 +80,7 @@ export default function AboutPage() {
                         <div className="text-center">
                             <div className="aspect-square bg-gray-100 rounded-2xl mb-4 relative overflow-hidden">
                                 <Image
-                                    src="/mehak.jpg"
+                                    src="/mehak.png"
                                     alt="Mehak Gadh"
                                     fill
                                     className="object-cover"
