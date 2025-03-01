@@ -1,4 +1,4 @@
-import type { MouseEvent, TouchEvent } from "react";
+import type { MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from "react";
 import { useRef, useState, useEffect } from "react";
 
 interface Point {
@@ -75,7 +75,7 @@ export function CanvasDraw({
     };
 
     // Get coordinates relative to canvas
-    const getCoordinates = (event: React.MouseEvent | React.TouchEvent | TouchEvent | MouseEvent): Point | null => {
+    const getCoordinates = (event: ReactMouseEvent | ReactTouchEvent | TouchEvent | MouseEvent): Point | null => {
         const canvas = canvasRef.current;
         if (!canvas) return null;
 
@@ -100,7 +100,7 @@ export function CanvasDraw({
     };
 
     // Start drawing
-    const startDrawing = (event: React.MouseEvent | React.TouchEvent) => {
+    const startDrawing = (event: ReactMouseEvent | ReactTouchEvent) => {
         const point = getCoordinates(event);
         if (!point) return;
 
@@ -109,7 +109,7 @@ export function CanvasDraw({
     };
 
     // Continue drawing
-    const draw = (event: React.MouseEvent | React.TouchEvent) => {
+    const draw = (event: ReactMouseEvent | ReactTouchEvent | TouchEvent) => {
         if (!isDrawing) return;
 
         const point = getCoordinates(event);
@@ -178,10 +178,11 @@ export function CanvasDraw({
         const canvas = canvasRef.current;
         if (!canvas) return;
 
-        const handleTouchMove = (e: TouchEvent) => {
+        // Use proper DOM event types for the event listeners
+        const handleTouchMove = (e: globalThis.TouchEvent) => {
             e.preventDefault();
             if (!isDrawing) return;
-            draw(e);
+            draw(e as unknown as TouchEvent);
         };
 
         const handleTouchEnd = () => {
