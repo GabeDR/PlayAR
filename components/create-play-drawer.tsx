@@ -49,6 +49,16 @@ export function CreatePlayDrawer({ open, onOpenChange, onPlayCreated }: CreatePl
         setIsDrawing(true);
     };
 
+    // Wrapper function to handle the button click
+    const handleDoneButtonClick = () => {
+        // Get the canvas element and its data URL
+        const canvas = document.querySelector('canvas');
+        if (canvas) {
+            const dataUrl = canvas.toDataURL('image/png');
+            handleCanvasImageSave(dataUrl);
+        }
+    };
+
     return (
         <Drawer open={open} onOpenChange={onOpenChange}>
             <DrawerContent className="h-[70vh] max-h-[70vh] overflow-hidden flex flex-col bg-white">
@@ -140,7 +150,7 @@ export function CreatePlayDrawer({ open, onOpenChange, onPlayCreated }: CreatePl
                                     />
                                     <div className="flex justify-end mt-4">
                                         <Button
-                                            onClick={handleCanvasImageSave}
+                                            onClick={handleDoneButtonClick}
                                             className="flex items-center gap-2"
                                         >
                                             <CheckIcon />
