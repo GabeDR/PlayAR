@@ -1,9 +1,40 @@
 'use client'
 
 import Image from 'next/image';
-import { Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useEffect, useState, useRef } from 'react';
 
 export default function AboutPage() {
+    // State for the partners carousel
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const carouselRef = useRef<HTMLDivElement>(null);
+
+    const partners = [
+        { id: 'fhsaa', name: 'FHSAA', logo: '/fhsaa.png' },
+        { id: 'meta', name: 'Meta', logo: '/meta.png' },
+        { id: 'optima', name: 'Optima', logo: '/optima.png' },
+        { id: 'soc', name: 'SOC', logo: '/soc.png' }
+    ];
+
+    // Auto-scroll effect for the carousel
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) =>
+                prevIndex === partners.length - 1 ? 0 : prevIndex + 1
+            );
+
+            if (carouselRef.current) {
+                const scrollAmount = carouselRef.current.scrollWidth / partners.length;
+                carouselRef.current.scrollTo({
+                    left: currentIndex * scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [currentIndex]);
+
     return (
         <main className="min-h-screen bg-gray-50">
             {/* Hero Section */}
@@ -117,6 +148,70 @@ export default function AboutPage() {
                 </div>
             </section>
 
+            {/* Partners Section */}
+            <section className="py-24 px-8 md:px-16 bg-gray-50">
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="text-3xl font-bold mb-12 text-center">Our Partners</h2>
+
+                    {/* Carousel Indicators */}
+                    <div className="flex justify-center gap-2 mb-8">
+                        {partners.map((partner) => (
+                            <button
+                                key={partner.id}
+                                type="button"
+                                onClick={() => setCurrentIndex(partners.findIndex(p => p.id === partner.id))}
+                                className={`w-3 h-3 rounded-full ${currentIndex === partners.findIndex(p => p.id === partner.id) ? 'bg-blue-600' : 'bg-gray-300'
+                                    }`}
+                                aria-label={`Go to ${partner.name} slide`}
+                            />
+                        ))}
+                    </div>
+
+                    {/* Carousel Container */}
+                    <div className="relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm">
+                        <div
+                            ref={carouselRef}
+                            className="flex transition-transform duration-500 ease-in-out"
+                            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                        >
+                            {partners.map((partner) => (
+                                <div
+                                    key={partner.id}
+                                    className="w-full flex-shrink-0 flex justify-center items-center px-8"
+                                >
+                                    <div className="relative h-32 w-full">
+                                        <Image
+                                            src={partner.logo}
+                                            alt={`${partner.name} logo`}
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Navigation Arrows */}
+                        <button
+                            type="button"
+                            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md hover:bg-white"
+                            onClick={() => setCurrentIndex(prev => prev === 0 ? partners.length - 1 : prev - 1)}
+                            aria-label="Previous slide"
+                        >
+                            <ChevronLeft className="w-6 h-6" />
+                        </button>
+                        <button
+                            type="button"
+                            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md hover:bg-white"
+                            onClick={() => setCurrentIndex(prev => prev === partners.length - 1 ? 0 : prev + 1)}
+                            aria-label="Next slide"
+                        >
+                            <ChevronRight className="w-6 h-6" />
+                        </button>
+                    </div>
+                </div>
+            </section>
+
             {/* Contact Section */}
             <section className="py-24 px-8 md:px-16 bg-white">
                 <div className="max-w-4xl mx-auto">
@@ -160,7 +255,10 @@ export default function AboutPage() {
                                 Interested in seeing PlayAR in action? Schedule a demo with our team and experience the future of athletic training firsthand.
                             </p>
                             <a href="/dashboard">
-                                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-2xl transition-colors">
+                                <button
+                                    type="button"
+                                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-2xl transition-colors"
+                                >
                                     Request Demo
                                 </button>
                             </a>
