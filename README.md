@@ -1,96 +1,36 @@
-# PlayAR
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Where Virtual Practice Meets Real Victory
+## Getting Started
 
-PlayAR is an augmented reality (AR) and virtual reality (VR) training platform designed for quarterbacks to practice play progressions, decision-making, and opponent evaluation in a simulated environment. By leveraging AI-driven analytics, PlayAR enhances football training with real-time feedback and personalized coaching insights.
+First, run the development server:
 
----
-
-## Features
-
-### Immersive Training
-- Uses **first-person AR/VR simulations** rather than pre-recorded footage.
-- Supports **interactive offensive and defensive play simulations**.
-- **AI-generated opponent movements** based on existing game data.
-
-### AI & Data Analytics
-- **Eye-tracking and head movement analysis** to assess decision-making.
-- **AI-driven feedback** on throws, progressions, and reaction times.
-- **Real-time play overlay** and trajectory prediction.
-
-### Customization & Accessibility
-- Coaches can **upload playbooks and formations**.
-- **Live-casting capabilities** for real-time coaching feedback.
-- **Multi-device support** for Meta Quest and other XR platforms.
-
----
-
-## Tech Stack
-
-### Software Frameworks & Tools
-- **Game Engine**: Unity (C#)
-- **3D Modeling**: Blender
-- **AI & Computer Vision**: OpenCV, TensorFlow
-- **Web Development**: React, Next.js, TypeScript
-- **Mobile & XR Development**: Xcode (iOS), Android Studio (Android)
-
-### Hardware Compatibility
-- **Meta Quest headsets** (Eye-tracking & Hand-tracking enabled)
-- **AR-compatible glasses** (Planned integration: Meta Orion, Snap Spectacles)
-
----
-
-## Installation & Setup
-
-### Prerequisites
-- Unity **2021+**
-- Meta Quest SDK
-- Node.js **16+** (For Web Dashboard)
-
-### Running Locally
-```sh
-# Clone the repository
-git clone https://github.com/PlayAR/PlayAR.git
-cd PlayAR
-
-# Install dependencies
-npm install  # for web components
-
-# Run web dashboard
+```bash
 npm run dev
-
-# Build Unity project
-Open Unity > Load PlayAR Project > Build and Run
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Contribution Guide
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-We welcome contributions! Follow these steps:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature-name`).
-3. Commit changes and push (`git push origin feature-name`).
-4. Submit a pull request.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
----
+## Learn More
 
-## Roadmap
-- AI-based defensive player movements
-- Eye-tracking analytics
-- Hand-tracking support for precise quarterback training
-- Expansion to additional football positions & other sports
+To learn more about Next.js, take a look at the following resources:
 
----
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Contact & Support
-For issues, please create a GitHub issue or reach out to us:
-- Website: [PlayAR Official](https://playar.co/)
-- Email: support@playar.co
-- Twitter: [@PlayAR](https://twitter.com/playar)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-## License
-MIT License. See `LICENSE` for details.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
