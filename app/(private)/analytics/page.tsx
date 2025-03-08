@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 "use client";
 
 import dynamic from 'next/dynamic';
@@ -7,8 +9,6 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import type { TooltipProps } from 'recharts';
 import type { ValueType, NameType } from 'recharts/types/component/DefaultTooltipContent';
 import type { ReactElement } from 'react';
-
-export const runtime = 'edge';
 
 // Only dynamically import the chart container to avoid SSR issues
 const ChartContainer = dynamic(() => Promise.resolve(({ children }: { children: ReactElement }) => (
