@@ -1,3 +1,5 @@
+export const runtime = 'edge'
+
 "use client";
 
 import dynamic from 'next/dynamic';
@@ -62,7 +64,7 @@ const tooltipFormatter = (value: ValueType, name: NameType, props: TooltipProps<
   return [`${value}${(payload as MetricType).unit}`, (payload as MetricType).name];
 };
 
-export default function Analytics({ searchParams: { player } }: { searchParams: { player?: "Jake" | "Gabe" | "Tali" | "Mehak"} }) {
+export default function Analytics({ searchParams: { player } }: { searchParams: { player?: "Jake" | "Gabe" | "Tali" | "Mehak" } }) {
   const selectedPlayer = player ?? "Jake";
 
   // Memoize player data to prevent unnecessary recalculations
