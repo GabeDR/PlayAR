@@ -1,14 +1,25 @@
 "use client"
 
-import { useEffect, useState } from "react";
+export const runtime = 'edge';
+
+import { useEffect, useState, useCallback, memo } from 'react';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Play as PlayIcon, BarChart2, Settings, Home, Eye, Menu, X, LayoutDashboard, PlayCircle, BarChart3, Radio } from "lucide-react";
+import {
+    Play as PlayIcon,
+    BarChart2,
+    Settings,
+    Home,
+    Eye,
+    Menu,
+    X,
+    LayoutDashboard,
+    PlayCircle,
+    BarChart3,
+    Radio
+} from "lucide-react";
 import Image from "next/image";
-import { useState, useCallback, memo } from 'react';
 import Footer from '../footer';
-
-export const runtime = 'edge';
 
 // Move static data outside component
 const navItems = [
@@ -35,7 +46,7 @@ const navItems = [
 ];
 
 // Memoize NavLink component to prevent unnecessary re-renders
-const NavLink = memo(({ href, icon: Icon, name }: { href: string; icon: any; name: string }) => (
+const NavLink = memo(({ href, icon: Icon, name }: { href: string; icon: React.ElementType; name: string }) => (
     <Link
         href={href}
         className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 hover:text-blue-600 hover:bg-white/50 transition-colors"

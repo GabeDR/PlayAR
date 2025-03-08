@@ -1,6 +1,6 @@
-export const runtime = 'edge';
-
 "use client";
+
+export const runtime = 'edge';
 
 import dynamic from 'next/dynamic';
 import { ChevronDown } from 'lucide-react';
