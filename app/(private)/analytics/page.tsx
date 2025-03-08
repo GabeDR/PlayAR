@@ -1,7 +1,5 @@
 "use client";
 
-export const runtime = 'edge'
-
 import dynamic from 'next/dynamic';
 import { ChevronDown } from 'lucide-react';
 import { useMemo } from 'react';
@@ -9,6 +7,8 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import type { TooltipProps } from 'recharts';
 import type { ValueType, NameType } from 'recharts/types/component/DefaultTooltipContent';
 import type { ReactElement } from 'react';
+
+export const runtime = 'edge';
 
 // Only dynamically import the chart container to avoid SSR issues
 const ChartContainer = dynamic(() => Promise.resolve(({ children }: { children: ReactElement }) => (

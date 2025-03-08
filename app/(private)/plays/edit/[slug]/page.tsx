@@ -1,13 +1,13 @@
 "use client";
 
-export const runtime = 'edge'
-
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { CanvasDraw } from '@/components/ui/canvas-draw';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
+
+export const runtime = 'edge';
 
 export default function EditPlay({ params }: { params: { slug: string } }) {
     const router = useRouter();

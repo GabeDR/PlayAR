@@ -1,9 +1,14 @@
-'use client'
+"use client"
 
-import { LayoutDashboard, PlayCircle, BarChart3, Radio, Menu, Home, X } from 'lucide-react';
-import Link from 'next/link';
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Play as PlayIcon, BarChart2, Settings, Home, Eye, Menu, X, LayoutDashboard, PlayCircle, BarChart3, Radio } from "lucide-react";
+import Image from "next/image";
 import { useState, useCallback, memo } from 'react';
 import Footer from '../footer';
+
+export const runtime = 'edge';
 
 // Move static data outside component
 const navItems = [
